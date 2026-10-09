@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Gifford | Cybersecurity</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+    }
+    nav, main, footer {
+      max-width: 1050px;
+      margin: auto;
+      padding: 24px;
+    }
+    nav { display: flex; justify-content: space-between; }
+    a { color: #7dd3fc; text-decoration: none; }
+    .hero { padding: 85px 0; }
+    .eyebrow { color: #38bdf8; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin: 0; }
+    h2 { margin-top: 40px; }
+    .hero p { max-width: 650px; color: #94a3b8; }
+    .button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1e293b;
+      padding: 24px;
+      border: 1px solid #334155;
+      border-radius: 12px;
+    }
+    .card:hover { border-color: #38bdf8; }
+    .card p { color: #94a3b8; }
+    footer { color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <nav>
+    <strong>MG / PORTFOLIO</strong>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">CYBERSECURITY / SOFTWARE ENGINEERING</div>
+      <h1>Michael Gifford</h1>
+      <p>
+        Cybersecurity student at Gonzaga University,
+        interested in network security, Linux systems,
+        software development, and secure infrastructure.
+      </p>
+      <a class="button"
+         href="https://github.com/MichaelGiff">
+        View GitHub
+      </a>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>DevOps Final Project</h3>
+          <p>CI/CD, automation, testing, and development workflows.</p>
+          <a href="https://github.com/MichaelGiff/334-Dev-ops-Final">
+            View Repository →
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Larry Linux</h3>
+          <p>Linux-focused project and technical exploration.</p>
+          <a href="https://github.com/MichaelGiff/Larry-Linux">
+            View Repository →
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Spotify Deck</h3>
+          <p>Software development project.</p>
+          <a href="https://github.com/MichaelGiff/spotify-deck">
+            View Repository →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm studying cybersecurity at Gonzaga University
+        and enjoy building practical systems while learning
+        how software and networks work under the hood.
+      </p>
+    </section>
+  </main>
+
+  <footer>Michael Gifford • GitHub Portfolio</footer>
+</body>
+</html>
