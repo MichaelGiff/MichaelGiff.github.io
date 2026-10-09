@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070c17">
+  <meta name="description" content="Resume of Michael Gifford, a Gonzaga University cybersecurity student specializing in Linux, networking, systems and security.">
+  <title>Résumé | Michael Gifford</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .resume-topline { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin:26px 0 6px; }
+    .resume-content { max-width:930px; padding:22px 0 50px; }
+    .resume-section { border-bottom:1px solid var(--border); padding:24px 0; }
+    .resume-section:last-child { border:0; }
+    .resume-section h2 { font-size:1.55rem; margin-bottom:18px; }
+    .resume-entry { margin:0 0 23px; }
+    .resume-entry:last-child { margin-bottom:0; }
+    .resume-entry h3 { font-size:1.12rem; }
+    .resume-entry p, .resume-entry li, .resume-section p { color:#bfcee0; }
+    .resume-entry ul { margin:11px 0 0; padding-left:20px; }
+    .resume-entry li + li { margin-top:6px; }
+    .resume-meta { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 25px; margin-bottom:7px; }
+    .resume-sub { margin:6px 0; color:var(--mint) !important; font-size:.87rem; }
+    .resume-list { display:grid; gap:8px; }
+    .resume-list p { margin:0; }
+    .resume-list strong { color:#e2f0ff; }
+    .contact-links { display:flex; flex-wrap:wrap; gap:10px 22px; font-size:.9rem; }
+    .contact-links a { overflow-wrap:anywhere; }
+    .print-only { display:none; }
+    @media print {
+      :root { color-scheme:light; }
+      body { color:#182536; background:#fff; font-size:11px; line-height:1.35; }
+      .site-header,.site-footer,.resume-topline,.print-hidden { display:none !important; }
+      .page-hero { padding:15px 0 12px; border-bottom:1px solid #bbb; }
+      .page-hero h1 { font-size:27px; color:#111; }
+      .page-hero p, .resume-entry p,.resume-entry li,.resume-section p { color:#333; }
+      .eyebrow,.resume-sub,.contact-links a { color:#164e68 !important; }
+      .container { width:100%; max-width:none; }
+      .resume-content { max-width:none; padding:4px 0; }
+      .resume-section { padding:10px 0; border-color:#ccc; }
+      .resume-section h2 { font-size:15px; margin:0 0 8px; }
+      .resume-entry { margin:0 0 10px; }
+      .resume-entry h3 { font-size:12px; }
+      .resume-entry ul { margin-top:5px; }
+      .resume-meta { gap:10px; }
+      .print-only { display:block; }
+      a { color:inherit !important; }
+      @page { size:letter; margin:0.55in; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="container nav" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">MG</span> Michael Gifford</a>
+    <div class="nav-links"><a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="resume.html" aria-current="page">Résumé</a><a href="index.html#contact">Contact</a><a href="https://github.com/MichaelGiff" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  </nav></header>
+  <main id="main">
+    <section class="page-hero"><div class="container">
+      <a class="back-link print-hidden" href="index.html">← Back to portfolio</a>
+      <p class="eyebrow">Résumé / Cybersecurity</p>
+      <h1>Michael Gifford</h1>
+      <p>Cybersecurity Student | Linux • Networking • Systems • Security</p>
+      <div class="contact-links">
+        <span>Spokane, WA</span>
+        <a href="mailto:mgifford@zagmail.gonzaga.edu">mgifford@zagmail.gonzaga.edu</a>
+        <a href="tel:+17204565892">(720) 456-5892</a>
+        <a href="https://github.com/MichaelGiff" target="_blank" rel="noopener noreferrer">github.com/MichaelGiff ↗</a>
+        <a href="https://www.linkedin.com/in/michael-gifford-zags" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+      <div class="resume-topline">
+        <a class="btn btn-primary" href="assets/Michael-Gifford-Resume.pdf" download id="resume-pdf" hidden>Download résumé (PDF) ↓</a>
+        <button class="btn btn-secondary" type="button" onclick="window.print()">Print / Save as PDF ↗</button>
+      </div>
+    </div></section>
+    <div class="container resume-content">
+      <section class="resume-section" aria-labelledby="education">
+        <h2 id="education">Education</h2>
+        <div class="resume-entry">
+          <div class="resume-meta"><h3>Gonzaga University — Bachelor of Science in Cybersecurity</h3><span>Expected May 2028</span></div>
+          <p>Spokane, WA</p>
+          <p><strong>Relevant coursework:</strong> Computer Networks, Database Management Systems, Data Structures, Linux &amp; DevOps, Computer Organization, Software Development, Discrete Structures, Software Engineering &amp; Ethics.</p>
+        </div>
+      </section>
+      <section class="resume-section" aria-labelledby="skills">
+        <h2 id="skills">Technical Skills</h2>
+        <div class="resume-list">
+          <p><strong>Languages:</strong> Python, Java, C++, Bash, SQL, Assembly</p>
+          <p><strong>Networking:</strong> TCP/IP, Wireshark, Nmap, SSH, Tailscale</p>
+          <p><strong>Infrastructure:</strong> Docker, KVM/libvirt, Virtual Machines, Linux Server Administration</p>
+          <p><strong>Development:</strong> Git, GitHub, GitHub Actions, CI/CD, pytest, Flask</p>
+        </div>
+      </section>
+      <section class="resume-section" aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
+        <div class="resume-entry">
+          <h3>Linux Home Lab &amp; Self-Hosted Infrastructure</h3>
+          <p class="resume-sub">Linux • Ubuntu Server • Debian • Docker • KVM/libvirt • Tailscale • Bash</p>
+          <ul><li>Built and administered a Linux-based home lab using Debian, Ubuntu Server, virtual machines, Docker containers, SSH, Bash, and Tailscale.</li></ul>
+        </div>
+        <div class="resume-entry">
+          <h3>Linux DevOps CI/CD Pipeline</h3>
+          <p class="resume-sub">Python • Flask • Bash • GitHub Actions • pytest</p>
+          <a href="https://github.com/MichaelGiff/334-Dev-ops-Final" target="_blank" rel="noopener noreferrer">Project source ↗</a> · <a href="projects/recipe-recommender.html">Read case study →</a>
+          <ul>
+            <li>Built a Python/Flask application and automated Linux development tools using Bash, Git, pytest, and GitHub Actions.</li>
+            <li>Developed a CI/CD pipeline that installs dependencies, lints code, executes unit/integration tests, runs HTTP health-check smoke tests, and packages builds.</li>
+          </ul>
+        </div>
+        <div class="resume-entry">
+          <h3>Cribbage Game — Team Software Development</h3>
+          <p class="resume-sub">Java • Git • GitHub • Object-Oriented Programming</p>
+          <ul>
+            <li>Designed and implemented automated opponent decision logic and player-versus-CPU gameplay functionality.</li>
+            <li>Debugged and integrated features into a shared codebase while communicating development with team members.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="resume-section" aria-labelledby="leadership">
+        <h2 id="leadership">Leadership</h2>
+        <div class="resume-entry">
+          <div class="resume-meta"><h3>Gonzaga University Club Hockey — Assistant Captain &amp; Treasurer</h3><span>2026 – Present</span></div>
+          <ul><li>Lead teammates on and off the ice while serving as a team captain and officer for Gonzaga's competitive club collegiate hockey program.</li></ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-content"><span>© 2026 Michael Gifford</span><a href="index.html">Back to portfolio ↑</a></div></footer>
+  <script>
+    // Show the original PDF download only after the file exists on GitHub Pages.
+    fetch('assets/Michael-Gifford-Resume.pdf', {method:'HEAD'})
+      .then(response => {
+        if (response.ok && (response.headers.get('content-type') || '').toLowerCase().includes('pdf')) {
+          document.getElementById('resume-pdf').hidden = false;
+        }
+      })
+      .catch(() => {});
+  </script>
+</body></html>
