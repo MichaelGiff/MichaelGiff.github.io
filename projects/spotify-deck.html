@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070c17">
+  <meta name="description" content="Designing a KDE Plasma desktop media widget with a local-first security boundary.">
+  <title>Spotify Deck | Michael Gifford</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="container nav" aria-label="Main navigation">
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">MG</span> Michael Gifford</a>
+    <div class="nav-links"><a href="../index.html#projects" aria-current="page">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a href="https://github.com/MichaelGiff" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  </nav></header>
+  <main id="main">
+    <section class="page-hero"><div class="container">
+      <a class="back-link" href="../index.html#projects">← All projects</a>
+      <p class="eyebrow">Project case study / Design documented</p>
+      <h1>Spotify Deck</h1>
+      <p>Designing a KDE Plasma desktop media widget with a local-first security boundary.</p>
+      <div class="meta-row"><span class="tag">KDE Plasma 6</span><span class="tag">QML</span><span class="tag">DBus</span><span class="tag">MPRIS</span><span class="tag">Security design</span></div>
+    </div></section>
+    <div class="container article-grid">
+      <article class="article-body">
+        <h2>Overview</h2><p>Spotify Deck is documented as a translucent KDE Plasma desktop widget for current-track information, playback controls, volume adjustments, and media status. The repository currently includes design, architecture, and security documentation; the implementation described in those documents is not yet present in the published repository.</p>
+        <h2>Architecture &amp; approach</h2><p>The documented architecture reads media state through KDE's local MPRIS model. The intended interface presents state through QML and sends playback controls back to the active desktop media player over DBus, rather than using Spotify's Web API.</p>
+        <div class="flow-diagram" aria-label="Simplified conceptual data flow"><span class="flow-node">Spotify desktop client</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Session DBus / MPRIS</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">KDE media model</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">QML widget</span></div>
+        <p class="note">This diagram is a simplified overview, not a complete network or data-flow specification.</p>
+        <h2>Engineering takeaways</h2>
+        <ul><li>Compared local desktop IPC against cloud-based API integration.</li><li>Documented the relationship between package metadata, applet state, and the visual UI.</li><li>Recorded tradeoffs around credentials, command execution, and untrusted track metadata.</li><li>Separated a design specification from evidence of deployed code.</li></ul>
+        <h2>Security perspective</h2><p>The intended design avoids OAuth tokens and does not require the widget to store Spotify credentials. Its documentation specifies a static application-launch command rather than shell commands constructed from media metadata. These are documented design choices, not an independent audit of a working release.</p>
+        <h2>Next improvements</h2><p>Publish the widget source, test installation on KDE Plasma, add screenshots, and verify threat-model assumptions against actual code.</p>
+        <div class="article-actions"><a class="btn btn-primary" href="https://github.com/MichaelGiff/spotify-deck" target="_blank" rel="noopener noreferrer">Explore repository ↗</a><a class="btn btn-secondary" href="../index.html#projects">Back to projects</a></div>
+      </article>
+      <aside class="aside-box"><h3>Repository</h3><a href="https://github.com/MichaelGiff/spotify-deck" target="_blank" rel="noopener noreferrer">MichaelGiff/spotify-deck ↗</a><p>The public repository contains README.md, SECURITY.md, and docs/architecture.md. Public implementation files were not present when this portfolio page was written.</p><h3>Portfolio status</h3><span class="pill">Design documented</span></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-content"><span>© 2026 Michael Gifford</span><a href="../index.html">Back to homepage ↑</a></div></footer>
+</body></html>
