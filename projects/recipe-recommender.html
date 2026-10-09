@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070c17">
+  <meta name="description" content="A Python/Flask web app that connects user-facing recipe recommendations with reproducible Linux automation and CI checks.">
+  <title>Recipe Recommender | Michael Gifford</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="container nav" aria-label="Main navigation">
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">MG</span> Michael Gifford</a>
+    <div class="nav-links"><a href="../index.html#projects" aria-current="page">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a href="https://github.com/MichaelGiff" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  </nav></header>
+  <main id="main">
+    <section class="page-hero"><div class="container">
+      <a class="back-link" href="../index.html#projects">← All projects</a>
+      <p class="eyebrow">Project case study / Code &amp; tests</p>
+      <h1>Recipe Recommender</h1>
+      <p>A Python/Flask web app that connects user-facing recipe recommendations with reproducible Linux automation and CI checks.</p>
+      <div class="meta-row"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">pytest</span><span class="tag">Bash</span><span class="tag">GitHub Actions</span></div>
+    </div></section>
+    <div class="container article-grid">
+      <article class="article-body">
+        <h2>Overview</h2><p>This collaborative DevOps course project lets users enter ingredients, meal type, and dietary preferences to find matching recipes. The repository includes a Flask interface and recommendation logic, plus scripts and an automated workflow for testing and packaging the application.</p>
+        <h2>Architecture &amp; approach</h2><p>Flask receives requests and renders templates. Recommendation logic lives in separate Python modules. Local scripts install dependencies, run tests, exercise a /health endpoint, and build a .tar.gz deployment artifact. A GitHub Actions workflow repeats those checks on repository events.</p>
+        <div class="flow-diagram" aria-label="Simplified conceptual data flow"><span class="flow-node">Browser form</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Flask routes</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Recipe matching</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Rendered results</span></div>
+        <p class="note">This diagram is a simplified overview, not a complete network or data-flow specification.</p>
+        <h2>Engineering takeaways</h2>
+        <ul><li>Separated application logic from Flask request handlers.</li><li>Used unit and integration tests, plus a live-process smoke check.</li><li>Packaged a Linux deployment artifact through a GitHub Actions workflow.</li><li>Worked with a teammate on a reproducible development workflow.</li></ul>
+        <h2>Security perspective</h2><p>The /health endpoint is intended for a smoke test. A potential next iteration would add stricter input validation, dependency scanning, and hardening of deployment settings; these are improvement ideas, not claims about existing protections.</p>
+        <h2>Next improvements</h2><p>Add screenshots and measured test results, dependency scanning, and a deployment demonstration.</p>
+        <div class="article-actions"><a class="btn btn-primary" href="https://github.com/MichaelGiff/334-Dev-ops-Final" target="_blank" rel="noopener noreferrer">Explore repository ↗</a><a class="btn btn-secondary" href="../index.html#projects">Back to projects</a></div>
+      </article>
+      <aside class="aside-box"><h3>Repository</h3><a href="https://github.com/MichaelGiff/334-Dev-ops-Final" target="_blank" rel="noopener noreferrer">MichaelGiff/334-Dev-ops-Final ↗</a><p>The source repository includes app.py, recommender.py, tests, automation scripts, and a workflow under .github/workflows.</p><h3>Portfolio status</h3><span class="pill">Code &amp; tests</span></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-content"><span>© 2026 Michael Gifford</span><a href="../index.html">Back to homepage ↑</a></div></footer>
+</body></html>
