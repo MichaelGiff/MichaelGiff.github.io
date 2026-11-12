@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070c17">
-  <meta name="description" content="Designing a KDE Plasma desktop media widget with a local-first security boundary.">
+  <meta name="description" content="Design notes for a KDE Plasma music widget using MPRIS and DBus.">
   <title>Spotify Deck | Michael Gifford</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -17,24 +17,29 @@
   <main id="main">
     <section class="page-hero"><div class="container">
       <a class="back-link" href="../index.html#projects">← All projects</a>
-      <p class="eyebrow">Project case study / Design documented</p>
+      <p class="eyebrow">Desktop widget concept</p>
       <h1>Spotify Deck</h1>
       <p>Designing a KDE Plasma desktop media widget with a local-first security boundary.</p>
       <div class="meta-row"><span class="tag">KDE Plasma 6</span><span class="tag">QML</span><span class="tag">DBus</span><span class="tag">MPRIS</span><span class="tag">Security design</span></div>
     </div></section>
     <div class="container article-grid">
       <article class="article-body">
-        <h2>Overview</h2><p>Spotify Deck is documented as a translucent KDE Plasma desktop widget for current-track information, playback controls, volume adjustments, and media status. The repository currently includes design, architecture, and security documentation; the implementation described in those documents is not yet present in the published repository.</p>
-        <h2>Architecture &amp; approach</h2><p>The documented architecture reads media state through KDE's local MPRIS model. The intended interface presents state through QML and sends playback controls back to the active desktop media player over DBus, rather than using Spotify's Web API.</p>
-        <div class="flow-diagram" aria-label="Simplified conceptual data flow"><span class="flow-node">Spotify desktop client</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Session DBus / MPRIS</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">KDE media model</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">QML widget</span></div>
-        <p class="note">This diagram is a simplified overview, not a complete network or data-flow specification.</p>
-        <h2>Engineering takeaways</h2>
-        <ul><li>Compared local desktop IPC against cloud-based API integration.</li><li>Documented the relationship between package metadata, applet state, and the visual UI.</li><li>Recorded tradeoffs around credentials, command execution, and untrusted track metadata.</li><li>Separated a design specification from evidence of deployed code.</li></ul>
-        <h2>Security perspective</h2><p>The intended design avoids OAuth tokens and does not require the widget to store Spotify credentials. Its documentation specifies a static application-launch command rather than shell commands constructed from media metadata. These are documented design choices, not an independent audit of a working release.</p>
-        <h2>Next improvements</h2><p>Publish the widget source, test installation on KDE Plasma, add screenshots, and verify threat-model assumptions against actual code.</p>
-        <div class="article-actions"><a class="btn btn-primary" href="https://github.com/MichaelGiff/spotify-deck" target="_blank" rel="noopener noreferrer">Explore repository ↗</a><a class="btn btn-secondary" href="../index.html#projects">Back to projects</a></div>
+        <h2>The idea</h2>
+        <p>I wanted a small Spotify controller on my KDE desktop without dealing with API keys or account logins. Spotify Deck is the design I wrote up for that. The public repository has documentation, but I haven't published a working applet.</p>
+        <h2>How it would work</h2>
+        <p>The widget would read track information and send playback commands through KDE's MPRIS integration over DBus. QML would handle the interface. That keeps controls on the local desktop instead of using Spotify's Web API.</p>
+        <h2>Security considerations</h2>
+        <p>The design doesn't require OAuth tokens or stored Spotify credentials. I also documented avoiding shell commands built from track metadata. Those are design choices, not claims about a tested application.</p>
+        <h2>Still to do</h2>
+        <p>Write the QML applet, test it on KDE Plasma 6, and add screenshots and installation steps once it works.</p>
+        <div class="article-actions"><a class="btn btn-primary" href="https://github.com/MichaelGiff/spotify-deck" target="_blank" rel="noopener noreferrer">View documentation ↗</a><a class="btn btn-secondary" href="../index.html#projects">Back to projects</a></div>
       </article>
-      <aside class="aside-box"><h3>Repository</h3><a href="https://github.com/MichaelGiff/spotify-deck" target="_blank" rel="noopener noreferrer">MichaelGiff/spotify-deck ↗</a><p>The public repository contains README.md, SECURITY.md, and docs/architecture.md. Public implementation files were not present when this portfolio page was written.</p><h3>Portfolio status</h3><span class="pill">Design documented</span></aside>
+      <aside class="aside-box">
+        <h3>Repository</h3>
+        <a href="https://github.com/MichaelGiff/spotify-deck" target="_blank" rel="noopener noreferrer">spotify-deck ↗</a>
+        <p>Design and architecture notes. No working widget source is published yet.</p>
+        <h3>Status</h3><span class="pill pill-progress">Design notes</span>
+      </aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-content"><span>© 2026 Michael Gifford</span><a href="../index.html">Back to homepage ↑</a></div></footer>
