@@ -194,3 +194,23 @@ h3 { margin: 0; font-size: 1.5rem; font-weight: 650; }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* Homelab technology breakdown. */
+.lab-stack { border-top: 1px solid var(--border); margin: 28px 0 35px; }
+.lab-stack-row {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.lab-stack-label {
+  color: var(--accent); text-transform: uppercase;
+  font-size: .74rem; font-weight: 650; letter-spacing: .06em;
+  padding-top: 4px;
+}
+.lab-stack-row strong { font-size: 1rem; font-weight: 650; }
+.lab-stack-row p { margin: 5px 0 0; }
+@media (max-width: 650px) {
+  .lab-stack-row { grid-template-columns: 1fr; gap: 4px; }
+}
