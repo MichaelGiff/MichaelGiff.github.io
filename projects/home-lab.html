@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="Michael Gifford's Linux home lab using Debian, Ubuntu Server, KVM/libvirt, Docker, SSH, and Tailscale to practice systems administration and infrastructure security.">
+  <title>Linux Home Lab | Michael Gifford</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">MG</span> Michael Gifford</a>
+      <div class="nav-links">
+        <a href="../index.html#projects" aria-current="page">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../resume.html">Résumé</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://github.com/MichaelGiff" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <a class="back-link" href="../index.html#projects">← All projects</a>
+        <p class="eyebrow">Personal infrastructure / Ongoing</p>
+        <h1>Linux Home Lab</h1>
+        <p>I built a Linux home lab to get hands-on experience with the systems that applications and networks run on. I use it for virtualization, containers, remote administration, and testing software outside my main desktop environment.</p>
+        <div class="meta-row" aria-label="Technologies"><span class="tag">Debian</span><span class="tag">Ubuntu Server</span><span class="tag">KVM/libvirt</span><span class="tag">Docker</span><span class="tag">SSH</span><span class="tag">Tailscale</span></div>
+      </div>
+    </section>
+
+    <div class="container article-grid">
+      <article class="article-body">
+        <h2>What I run</h2>
+        <p>My setup starts with a Debian Linux workstation. I use KVM/libvirt to run virtual machines, including Ubuntu Server, and Docker for self-hosted software. SSH, Bash, and Tailscale are part of how I work with and manage the environment.</p>
+
+        <div class="lab-stack" aria-label="Technology areas in my home lab">
+          <div class="lab-stack-row">
+            <span class="lab-stack-label">Host system</span>
+            <div><strong>Debian Linux</strong><p>Daily Linux environment, command-line tools, package management, and system troubleshooting.</p></div>
+          </div>
+          <div class="lab-stack-row">
+            <span class="lab-stack-label">Virtualization</span>
+            <div><strong>KVM / libvirt and Ubuntu Server</strong><p>Separate server workloads from the host and practice running and administering a Linux guest.</p></div>
+          </div>
+          <div class="lab-stack-row">
+            <span class="lab-stack-label">Applications</span>
+            <div><strong>Docker and self-hosted services</strong><p>Work with containerized applications and local services. I also use Ollama with Open WebUI as a local AI setup.</p></div>
+          </div>
+          <div class="lab-stack-row">
+            <span class="lab-stack-label">Access and tools</span>
+            <div><strong>SSH, Tailscale, Bash</strong><p>Remote command-line access, private device connectivity, and day-to-day Linux administration.</p></div>
+          </div>
+        </div>
+
+        <h2>What this teaches me</h2>
+        <p>I'm using the lab to understand infrastructure beyond writing application code. The technologies overlap with tasks that systems, cloud, and security teams handle, even though this is a smaller personal environment.</p>
+        <ul>
+          <li><strong>Virtualization:</strong> How a host and guest operating system are separated and how server workloads can be isolated.</li>
+          <li><strong>Containers:</strong> How to run applications with their own dependencies and manage them separately from the underlying OS.</li>
+          <li><strong>Remote administration:</strong> How SSH and a private overlay network fit into access to machines and services.</li>
+          <li><strong>Operations:</strong> How to investigate service failures, check system state, and make configuration changes from the terminal.</li>
+        </ul>
+
+        <h2>What I want to add</h2>
+        <p>These are next steps, not deployed features. I want to move toward a more structured lab with better network boundaries and documentation.</p>
+        <ul>
+          <li><strong>Network isolation:</strong> A dedicated router or firewall and separated lab devices or subnets.</li>
+          <li><strong>DNS services:</strong> Pi-hole or a similar resolver/filtering service on the private network.</li>
+          <li><strong>Identity and access:</strong> A small authentication lab to study account management and least privilege.</li>
+          <li><strong>Visibility:</strong> Centralized logs, basic monitoring, and a repeatable way to check service health.</li>
+        </ul>
+
+        <h2>Documentation</h2>
+        <p>I'm working toward a sanitized network diagram, a service inventory, setup notes, and troubleshooting examples. I won't publish real credentials, private keys, or details that could expose my home network.</p>
+        <div class="article-actions">
+          <a class="btn btn-primary" href="../index.html#projects">Back to projects</a>
+          <a class="btn btn-secondary" href="../resume.html">View résumé</a>
+        </div>
+      </article>
+      <aside class="aside-box">
+        <h3>Lab status</h3>
+        <span class="pill">Ongoing personal project</span>
+        <p>The Linux, virtualization, container, and remote-access tools above are part of my hands-on setup. Planned additions are listed separately.</p>
+        <h3>Core technologies</h3>
+        <p>Debian, Ubuntu Server, KVM/libvirt, Docker, SSH, Tailscale, Bash</p>
+        <h3>Related skills</h3>
+        <p>Linux administration, virtualization, container operations, networking, troubleshooting</p>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-content"><span>© 2026 Michael Gifford</span><a href="../index.html">Back to homepage ↑</a></div></footer>
+</body>
+</html>
